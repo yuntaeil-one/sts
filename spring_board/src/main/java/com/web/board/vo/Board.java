@@ -41,55 +41,5 @@ public class Board {
 	@Column(name = "b_update_date")
 	private LocalDateTime b_update_date;
 
-//	public Integer getB_id() {
-//		return b_id;
-//	}
-//
-//	public void setB_id(Integer b_id) {
-//		this.b_id = b_id;
-//	}
-//
-//	public String getB_writer() {
-//		return b_writer;
-//	}
-//
-//	public void setB_writer(String b_writer) {
-//		this.b_writer = b_writer;
-//	}
-//
-//	public String getB_title() {
-//		return b_title;
-//	}
-//
-//	public void setB_title(String b_title) {
-//		this.b_title = b_title;
-//	}
-//
-//	public String getB_contents() {
-//		return b_contents;
-//	}
-//
-//	public void setB_contents(String b_contents) {
-//		this.b_contents = b_contents;
-//	}
-//
-//	public LocalDateTime getB_created_date() {
-//		return b_created_date;
-//	}
-//
-//	public void setB_created_date(LocalDateTime b_created_date) {
-//		this.b_created_date = b_created_date;
-//	}
-//
-//	public LocalDateTime getB_update_date() {
-//		return b_update_date;
-//	}
-//
-//	public void setB_update_date(LocalDateTime b_update_date) {
-//		this.b_update_date = b_update_date;
-//	}
-
-
-
 
 }
