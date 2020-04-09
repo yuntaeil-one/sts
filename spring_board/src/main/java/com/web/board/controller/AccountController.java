@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.web.board.api.OpenAPI;
 import com.web.board.service.AccountService;
 import com.web.board.vo.Account;
 
@@ -19,7 +20,10 @@ import com.web.board.vo.Account;
 public class AccountController {
 
 	@Autowired
-	AccountService accountService;
+	private AccountService accountService;
+	@Autowired
+	private OpenAPI openAPI;
+	
 	
 	@GetMapping(value = "/list")
 	public ModelAndView AccountList() {
@@ -84,5 +88,16 @@ public class AccountController {
 		return view;
 
 	}
-
+	
+	@PostMapping(value = "/api/ExchangeRate")
+	public ModelAndView ExchangeRate() {
+		
+		ModelAndView view = new ModelAndView("account/list");
+//		HashMap<String, String> map = new HashMap<String, String>();
+//		map = openAPI.getKoreaexim();
+		
+		view.addObject("exchangeRate", openAPI.getKoreaexim());
+		
+		return view;
+	}
 }

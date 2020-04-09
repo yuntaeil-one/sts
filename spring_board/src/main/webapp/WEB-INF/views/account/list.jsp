@@ -20,37 +20,59 @@
 
 <script type="text/javascript">
 
-	//구글차트 
-	google.charts.load('current', {'packages':['corechart']}); 
-	google.charts.setOnLoadCallback(drawChart);
+$(document).ready(function(){
+	callAjax();
+});
+
+
+function callAjax() {
+
+$.ajax({
+	type : "post",
+	url : "/account/api/ExchangeRate",
+	data : {},
+	success : function(obj) {
+		var data = JSON.parse(obj);
 	
-	function drawChart() {
-	    var data = new google.visualization.DataTable();
+	}, error : function(xhr, status, error) {
+		alert("ERROR");
+		}
+	
+	});
 
-	    data.addColumn('string','자산');
-	    data.addColumn('number','금액');
+}
 
-	    var chart = new google.visualization.PieChart(document.getElementById('myChart'));
 
-	    var opt = {
-	            'title':'자산 구분',
-	            'width':500,
-	            'height':500,
-	            pieSliceText:'label',
-	            bar : {
-		            groupWidth : '50%'
-	            },
-	            legend:'bottom' 
-	    };
-	    
-	    <c:forEach items="${accountMap}" var="item" varStatus="loop">
-	    	data.addRow(['${item.key}', ${item.value}]);	
-	    	chart.draw(data,opt);
-	    </c:forEach>
 
-	    
-	    
-	}
+
+//구글차트 
+google.charts.load('current', {'packages':['corechart']}); 
+google.charts.setOnLoadCallback(drawChart);
+
+function drawChart() {
+    var data = new google.visualization.DataTable();
+
+    data.addColumn('string','자산');
+    data.addColumn('number','금액');
+
+    var chart = new google.visualization.PieChart(document.getElementById('myChart'));
+
+    var opt = {
+            'title':'자산 구분',
+            'width':500,
+            'height':500,
+            pieSliceText:'label',
+            bar : {
+	            groupWidth : '50%'
+            },
+            legend:'bottom' 
+    };
+    
+    <c:forEach items="${accountMap}" var="item" varStatus="loop">
+    	data.addRow(['${item.key}', ${item.value}]);	
+    	chart.draw(data,opt);
+    </c:forEach>
+}
 
 </script>
 	
