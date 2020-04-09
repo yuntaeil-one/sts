@@ -9,11 +9,13 @@ import javax.persistence.Table;
 
 import org.springframework.data.annotation.CreatedDate;
 
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
 @Entity
 @Table(name = "account")
-@Data
+@Getter
+@Setter
 public class Account {
 	
 	@Id

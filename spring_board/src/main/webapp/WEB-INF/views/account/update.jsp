@@ -28,7 +28,7 @@
 		</form>
 		
 		<button type="submit" class="btn btn-primary">저장</button>
-		<a href="/account/list"><button type="button" class="btn btn-danger"">취소</button></a>
+		<a href="/account/list"><button type="button" class="btn btn-danger">취소</button></a>
 		<a href="/account/delete/${account.type}"><button type="button" class="btn btn-danger">삭제</button></a>
 		
 	</div>
