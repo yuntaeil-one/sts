@@ -27,6 +27,9 @@
 			<div class="form-group">
 				<label for="form">금액 : </label> <input type="text" class="form-control" id="balance" placeholder="Enter Balance" name="balance" autocomplete="off">
 			</div>
+			<div class="form-group">
+				<label for="form">계좌수 : </label> <input type="text" class="form-control" id="balance_cnt" placeholder="Enter Balance_cnt" name="balance_cnt" autocomplete="off">
+			</div>
 			<button type="submit" class="btn btn-primary">Submit</button>
 			<a href="/account/list"><button type="button" class="btn btn-info">Move to List</button></a>
 		</form>

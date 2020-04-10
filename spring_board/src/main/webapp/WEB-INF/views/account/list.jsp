@@ -31,8 +31,8 @@ $.ajax({
 	type : "post",
 	url : "/account/api/ExchangeRate",
 	data : {},
-	success : function(obj) {
-		var data = JSON.parse(obj);
+	success : function(result) {
+		var data = result;
 	
 	}, error : function(xhr, status, error) {
 		alert("ERROR");
@@ -41,9 +41,6 @@ $.ajax({
 	});
 
 }
-
-
-
 
 //구글차트 
 google.charts.load('current', {'packages':['corechart']}); 
@@ -80,6 +77,9 @@ function drawChart() {
 <body>
 	<div class="container">
 		<p align="center" style="font-size: 50px;">나의 자산 현황</p>
+		<div class="form-group">
+			<h2 id="ExchangeRate"></h2>
+		</div>
 		<div align="right">
 			<a href="/account/create"><button type="button" class="btn btn-primary">Create</button></a>
 		</div>
