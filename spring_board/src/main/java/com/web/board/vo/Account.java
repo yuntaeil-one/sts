@@ -13,11 +13,11 @@ import lombok.Getter;
 import lombok.Setter;
 
 @Entity
-@Table(name = "account")
+@Table(name = "account", schema = "mydb")
 @Getter
 @Setter
 public class Account {
-	
+
 	@Id
 	@Column(name = "type")
 	private String type;
@@ -25,8 +25,8 @@ public class Account {
 	@Column(name = "balance")
 	private int balance;
 	
-	@Column(name = "balanceCnt")
-	private int balanceCnt;
+	@Column(name = "balance_cnt")
+	private int balance_cnt;
 	
 	@CreatedDate
 	@Column(name = "create_dt")
