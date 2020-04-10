@@ -20,9 +20,9 @@ import com.web.board.vo.Account;
 public class AccountController {
 
 	@Autowired
-	private AccountService accountService;
+	AccountService accountService;
 	@Autowired
-	private OpenAPI openAPI;
+	OpenAPI openAPI;
 	
 	
 	@GetMapping(value = "/list")

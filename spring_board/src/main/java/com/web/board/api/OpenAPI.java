@@ -6,20 +6,17 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.net.HttpURLConnection;
 import java.net.URL;
-import java.util.HashMap;
 
 import org.jboss.logging.Logger;
+import org.springframework.stereotype.Component;
 
-import com.google.gson.JsonElement;
-import com.google.gson.JsonParser;
-
+@Component
 public class OpenAPI {
 	
 	Logger logger = Logger.getLogger(OpenAPI.class);
 	
 	public String getKoreaexim() {
 		
-		HashMap<String, String> map = new HashMap<String, String>();
 		String reqUrl = "https://www.koreaexim.go.kr/site/program/financial/exchangeJSON";
 		String result = "";
 		
@@ -50,8 +47,8 @@ public class OpenAPI {
 			System.out.println("response body : " + result );	
 			
 			// Gson 라이브러리에 포함된 클래스로 JSON 파싱 객체 생성
-			JsonParser parser = new JsonParser();
-			JsonElement element = parser.parse(result);
+//			JsonParser parser = new JsonParser();
+//			JsonElement element = parser.parse(result);
 			
 //			// 조회 결과
 //			String RESULT = element.getAsJsonObject().get("RESULT").getAsString();

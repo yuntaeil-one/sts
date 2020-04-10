@@ -88,6 +88,8 @@ function drawChart() {
 				<tr>
 					<th>자산 구분</th>
 					<th>금액</th>
+					<th>계좌수</th>
+					<th>투자금액</th>
 					<th>등록일자</th>
 					<th>수정일자</th>
 				</tr>
@@ -98,7 +100,9 @@ function drawChart() {
 						<td>${account.type}</td>
 						<td>
 							<a href="/account/update/${account.type}"><fmt:formatNumber value="${account.balance}" pattern="#,###" /></a>
-						</td>	
+						</td>
+						<td>${account.balanceCnt}</td>
+						<td>${account.balance} * ${account.balanceCnt}</td>
 						<td>${account.create_dt}</td>
 						<td>${account.update_dt}</td>
 					</tr>	

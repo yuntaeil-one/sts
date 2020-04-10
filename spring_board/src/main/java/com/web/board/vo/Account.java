@@ -25,6 +25,9 @@ public class Account {
 	@Column(name = "balance")
 	private int balance;
 	
+	@Column(name = "balanceCnt")
+	private int balanceCnt;
+	
 	@CreatedDate
 	@Column(name = "create_dt")
 	private LocalDate create_dt;
